@@ -1,0 +1,59 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/login.css');
+    </isscript>
+    <div class="row justify-content-center equal-height">
+        <div class="col-sm-8 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="login-form-nav">
+                        <form action="${pdict.actionUrl}" method="POST" class="newsletter-form" <isprint value="${pdict.newsletterForm.attributes}" encoding="off" />>
+                            <div class="form-group required">
+                                <label class="form-control-label">
+                                    <isprint value="${pdict.newsletterForm.name.label}" encoding="htmlcontent" />
+                                </label>
+                                <input type="input" class="form-control" id="newsletter-form-name" <isprint value="${pdict.newsletterForm.name.attributes}" encoding="off" />>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group required">
+                                <label class="form-control-label">
+                                    <isprint value="${pdict.newsletterForm.age.label}" encoding="htmlcontent" />
+                                </label>
+                                <input type="input" class="form-control" id="newsletter-form-age" <isprint value="${pdict.newsletterForm.age.attributes}" encoding="off" />>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group required">
+                                <label class="form-control-label">
+                                    <isprint value="${pdict.newsletterForm.email.label}" encoding="htmlcontent" />
+                                </label>
+                                <input 
+                                    type="email" 
+                                    class="form-control" 
+                                    id="newsletter-form-email"
+                                    <isprint value="${pdict.newsletterForm.email.attributes}" encoding="off" />
+                                <div class="invalid-feedback"></div>
+                            </div>
+                              <div class="form-group required">
+                                <label class="form-control-label">
+                                    <isprint value="${pdict.newsletterForm.gender.label}" encoding="htmlcontent" />
+                                </label>
+                                <select class="form-control" id="newsletter-form-gender">
+
+                                <option value="${pdict.newsletterForm.gender.attributes}"></option>
+
+                                    <option id="newsletter-form-gender" value="${pdict.newsletterForm.gender.attributes}">Male</option>
+                                    <option id="newsletter-form-gender"  value="${pdict.newsletterForm.gender.attributes}">Female</option>
+                                    <option id="newsletter-form-gender"  value="${pdict.newsletterForm.gender.attributes}">Others</option>
+
+                                    </select>
+                            </div>
+                            <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+                               <button type="submit" class="btn btn-block btn-primary">${Resource.msg('button.form.emailsignup', 'homePage', null)}</button>
+                        </form>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

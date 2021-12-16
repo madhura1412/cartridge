@@ -1,0 +1,20 @@
+<isloop items= "${pdict.car}" var = "cars" status ="status">
+
+   <td>   Name:    ${cars.name} <br/>
+</td>
+<td>
+       Model:  ${cars.models} <br/>
+</td>
+<td>
+      Color:   ${cars.color} <br/>
+</td>
+<td>
+      CC:   ${cars.cc} <br/>
+
+</td>
+
+<td>
+       Brand:  ${cars.brand} <br/>
+</td><hr>
+</isloop>
+</tr>

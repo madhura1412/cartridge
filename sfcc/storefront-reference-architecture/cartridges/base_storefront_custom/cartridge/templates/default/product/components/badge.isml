@@ -1,0 +1,18 @@
+<isscript>
+    var site=require('dw/system/Site');
+    var customValue=site.getCurrent().getCustomPreferenceValue("badge");
+</isscript>
+<isif condition="${customValue}">
+<isif condition="${product.badge=="newArrival"}">
+<h1>${product.badge}</h1>
+<img src="${URLUtils.staticURL('/images/newarrival.jpg')}" width =" 20%" height = "20%" alt="image" /alt="image" />
+</isif>
+<isif condition="${product.badge=="trending"}">
+<h1>${product.badge}</h1>
+<img src="${URLUtils.staticURL('/images/trending.jpg')}" width =" 20%" height = "20%" alt="image" />
+</isif>
+<isif condition="${product.badge=="youthCentric"}">
+<h1>${product.badge}</h1>
+<img src="${URLUtils.staticURL('/images/images.png')}" width =" 20%" height = "20%" alt="image" />
+</isif>
+</isif>

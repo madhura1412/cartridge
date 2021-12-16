@@ -1,0 +1,13 @@
+<iscomment> <isdecorate template="common/layout/page">
+    <h3>
+       ${pdict.newsletterFormObj.name}<br>
+${pdict.newsletterFormObj.age}<br>
+${pdict.newsletterFormObj.email}<br>
+
+    </h3>
+    Back to <a href="${pdict.continueUrl}">Newsletter Subscription</a>.
+</isdecorate> </iscomment>
+
+
+${pdict.success}
+

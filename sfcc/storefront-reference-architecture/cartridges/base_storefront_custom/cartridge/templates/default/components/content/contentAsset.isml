@@ -1,0 +1,2 @@
+<isinclude url="${URLUtils.url('Page-Include', 'cid', pdict.aid)}"/>
+<isinclude url="${URLUtils.url('Page-Include', 'cid', pdict.cid)}" sf-toolkit="on" />

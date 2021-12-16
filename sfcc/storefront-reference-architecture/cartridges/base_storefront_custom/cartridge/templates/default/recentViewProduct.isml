@@ -1,0 +1,22 @@
+<isscript>
+        var site=require('dw/system/Site');
+    var recentProductCount=site.getCurrent().getCustomPreferenceValue("recentProductCount");
+
+    </isscript>
+<isif condition="${pdict.recentViewProductID!=null}">
+<h2 style="text-align:center">Recent Viewed Product</h2>
+    <div class="container home-categories homepage">
+        <div class="row home-main-categories no-gutters">
+<isloop items="${pdict.recentViewProduct}" var="product" status="loopstatus">
+<isif condition="${loopstatus.count<=recentProductCount}">
+    <div class="col-6 col-sm-2">
+            <isinclude url="${URLUtils.url('Tile-Show', 'pid', product, 'pview', 'tile', 'ratings', true, 'swatches', true)}"/>
+        </div>
+<iselse/>
+  <isbreak/>  
+</isif>  
+</isloop>
+</div>
+</div>
+
+</isif>

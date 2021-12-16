@@ -1,0 +1,7 @@
+<h1>Dear Customer,</h1><br>
+<p>${Resource.msg('label.currentlyAvailable', 'label', null)}<br>
+<b>${pdict.productInfo.productName}</b>
+To go to the product link click 
+<a href="https://dev24-na01-pfsweb.demandware.net/on/demandware.store/Sites-RefArch-Site/en_US/Product-Show?pid=${pdict.productInfo.productId}">here</a></p>
+  
+<h1>Thank You</h1>

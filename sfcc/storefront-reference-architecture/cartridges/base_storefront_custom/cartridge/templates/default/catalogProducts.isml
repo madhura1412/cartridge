@@ -1,0 +1,33 @@
+   <style>
+table,th,td{
+    border:2px solid black;
+}
+</style>
+   
+   <isif condition="${pdict.categories}">
+                <isloop items="${pdict.categories}" var="category">
+                    <isif condition="${category.customCategoryDisplay}">
+                        
+               <h4> Category Name :${category.name}  <br> Category Product Length: ${category.product}</h4>
+                            <isset name="Item" value="${category}" scope="page" />
+                            <h4>Sub Categories</h4>
+                               <table>
+                                        <tr>
+
+                                        <th>Sub Categories NAME </th>
+                                        <th> Sub Categories ID </th>
+                                        </tr>
+                                  <isloop items="${Item.subCategories}" var="category">
+                                     
+                                        <tr>
+                                         
+                                             <td>${category.name}   <br></td>
+                                             <td>${category.id}   <br></td>
+                                       
+                                            </tr>
+                                        
+                                </isloop>
+                                </table>
+                    </isif>
+                </isloop>
+            </isif>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" >
+    <field 
+        formid="name"
+        label="label.input.name.profile"
+        mandatory="true"
+        max-length="50"
+        type="string" />
+
+    <field
+        formid="city"
+        label="label.input.city"
+        mandatory="true"
+        max-length="50"
+        type="string" />
+  <field
+        formid="email"
+        label="label.input.email.profile"
+        mandatory="true"
+        max-length="50"
+        regexp="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$"
+        type="string" />
+
+    s<field
+        formid="gender"
+        label="label.input.gender.profile"
+        mandatory="true"
+        type="string" />
+  
+</form>

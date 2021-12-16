@@ -1,0 +1,7 @@
+<isdecorate template="common/layout/page">
+    <h3>
+    ${pdict.newsletterFormObj.email}  <br>  This customer is exists...!
+    </h3>
+    Back to <a href="${pdict.continueUrl}">Newsletter Subscription.</a>
+</isdecorate>
+${pdict.error}

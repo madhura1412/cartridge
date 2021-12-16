@@ -1,0 +1,2 @@
+
+<isinclude url="${URLUtils.url('RecentView-View')}" />

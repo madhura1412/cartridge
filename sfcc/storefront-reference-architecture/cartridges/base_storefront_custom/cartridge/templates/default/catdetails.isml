@@ -1,0 +1,4 @@
+<iscomment> ${pdict.customer.firstName}
+${pdict.customer.custom.zip_code}
+${pdict.customer.custom.address} </iscomment>
+There is no customer id is there

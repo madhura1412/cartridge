@@ -1,0 +1,20 @@
+<isif condition="${pdict.addressBook}">
+<h3>Customer Address</h3>
+  <isloop items="${pdict.addressBook}" var="address">
+${address.address.firstName} 
+${address.address.lastName}
+${address.address.address1}
+${address.address.address2}
+${address.address.city}
+
+<br>
+</isloop>  
+<iselseif condition="${pdict.errorCust}" />
+   <h2> ${pdict.errorCust}</h2>
+    <iselseif condition="${pdict.errorMessage}" />
+   <h2>${pdict.errorMessage}</h2> 
+   <iselse/>
+      <h2>${pdict.errorAddress}</h2> 
+</isif>
+        
+        

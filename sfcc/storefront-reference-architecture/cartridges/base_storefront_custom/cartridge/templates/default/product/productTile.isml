@@ -1,0 +1,69 @@
+<isscript>
+    var site=require('dw/system/Site');
+    var customValue=site.getCurrent().getCustomPreferenceValue("hideProductOption");
+</isscript>
+<isif condition="${customValue==false}">
+<isif condition="${pdict.product.productType != "optionProduct"}">
+<div class="product-tile">
+    <!-- dwMarker="product" dwContentID="${product.uuid}" -->
+    <isinclude template="product/components/productTileImage" />
+    <div class="tile-body">
+    
+        <isif condition="${pdict.display.swatches !== false}">
+            <isinclude template="product/components/productTileSwatch" />
+        </isif>
+
+    <isinclude template="product/viewCount" />
+    
+        <isinclude template="product/components/productTileName" />
+
+        <isset name="price" value="${product.price}" scope="page" />
+        <isif condition="${product.productType === 'set'}">
+            <isinclude template="product/components/pricing/setPrice" />
+        <iselse/>
+            <isinclude template="product/components/pricing/main" />
+        </isif>
+
+        <isif condition="${pdict.display.ratings !== false}">
+            <isinclude template="product/productTileFooter" />
+        </isif>
+
+        <isinclude template="product/components/badge" />
+        
+    </div>
+    <!-- END_dwmarker -->
+</div>
+<iselse/>
+<isinclude template="productMsg" />
+</isif>
+<iselse/>
+<div class="product-tile">
+    <!-- dwMarker="product" dwContentID="${product.uuid}" -->
+    <isinclude template="product/components/productTileImage" />
+    <div class="tile-body">
+  
+        
+    <isif condition="${pdict.display.swatches !== false}">
+            <isinclude template="product/components/productTileSwatch" />
+        </isif>
+        <isinclude template="product/viewCount" />
+        
+        <isinclude template="product/components/productTileName" />
+
+        <isset name="price" value="${product.price}" scope="page" />
+        <isif condition="${product.productType === 'set'}">
+            <isinclude template="product/components/pricing/setPrice" />
+        <iselse/>
+            <isinclude template="product/components/pricing/main" />
+        </isif>
+
+        <isif condition="${pdict.display.ratings !== false}">
+            <isinclude template="product/productTileFooter" />
+        </isif>
+
+        <isinclude template="product/components/badge" />
+        
+    </div>
+    <!-- END_dwmarker -->
+</div>
+</isif>

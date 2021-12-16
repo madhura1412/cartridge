@@ -1,0 +1,3 @@
+${pdict.customer.custom.listOfProductsViewed}
+          
+            <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'swatches', true)}"/>

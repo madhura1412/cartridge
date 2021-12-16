@@ -1,0 +1,4 @@
+<div class="col-12 grid-footer">
+     <img class="hidden-md-down" style="height:100%; width:100%" src="${URLUtils.staticURL('/images/product.jpg')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+<p style="text-align:center">This is optionProduct</p>
+</div>

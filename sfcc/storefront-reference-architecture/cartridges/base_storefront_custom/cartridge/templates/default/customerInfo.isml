@@ -1,0 +1,4 @@
+CustomerNo:${pdict.customerInfo.customerNo}<br>
+Email:${pdict.customerInfo.email}<br>
+FirstName:${pdict.customerInfo.firstName}<br>
+LastName:${pdict.customerInfo.lastName}<br>

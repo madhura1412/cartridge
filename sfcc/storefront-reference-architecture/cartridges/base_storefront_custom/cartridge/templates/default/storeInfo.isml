@@ -1,0 +1,5 @@
+${pdict.storeInfo.address1}<br>
+${pdict.storeInfo.address2}<br>
+${pdict.storeInfo.city}<br>
+${pdict.storeInfo.email}<br>
+

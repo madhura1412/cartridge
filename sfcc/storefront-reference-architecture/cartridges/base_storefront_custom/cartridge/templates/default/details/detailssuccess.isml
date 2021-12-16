@@ -1,0 +1,4 @@
+${pdict.detailsForm.name.value}
+${pdict.detailsForm.city.value}
+${pdict.detailsForm.gender.value}
+${pdict.detailsForm.email.value}

@@ -1,0 +1,38 @@
+   <style>
+table,th,td{
+    border:2px solid black;
+     border-collapse: collapse;
+}
+</style>
+   
+   <isif condition="${pdict.categories}">
+                <isloop items="${pdict.categories}" var="category">                  
+               <h4> Category Name :${category.name}  <br> Category ID: ${category.id} <br> Category Product Length: ${category.productLength} 
+                           <br>Category product:<isloop items="${category.product}" var="product" status="loopstatus">
+                                             ${product.name},
+                                          </isloop></h4>
+                            <isset name="Item" value="${category}" scope="page" />
+                            <h4>Sub Categories</h4>
+                               <table>
+                                        <tr>
+                                        <th>Sub Categories NAME </th>
+                                        <th> Sub Categories ID </th>
+                                        <th> Sub Categories ProductLength </th>
+                                        <th> Sub Categories Product </th>
+                                        </tr>
+                                  <isloop items="${Item.subCategories}" var="category">                                   
+                                        <tr>                                        
+                                             <td>${category.name}   <br></td>
+                                             <td>${category.id}   <br></td> 
+                                             <td>${category.productLength} <br></td>    
+                                         <td> <isloop items="${category.product}" var="product" status="loopstatus">
+                                         <isif condition="${loopstatus.count<=6}">
+                                         ${product.name},
+                                         </isif>
+                                            
+                                          </isloop>   </td>                             
+                                            </tr>
+                                </isloop>
+                                </table> 
+                </isloop> 
+            </isif>

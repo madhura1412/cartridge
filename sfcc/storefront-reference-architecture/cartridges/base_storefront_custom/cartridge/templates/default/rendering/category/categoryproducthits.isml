@@ -1,0 +1,6 @@
+    <isslot
+        id="cat-landing-product"
+        context="category"
+        description=""
+        context-object="${pdict.category}"
+    />

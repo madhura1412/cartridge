@@ -1,0 +1,36 @@
+<div class="row cart-and-ipay">
+    <div class="col-sm-12">
+     <isif condition="${product.available}">
+           <a href="${URLUtils.url('Job-WhiteList', 'pid', pdict.product.id)}">
+                <button class="btn btn-primary"><i class="fa fa-heart-o"></i></button></a>
+        <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
+        <button class="add-to-cart btn btn-primary"
+                data-toggle="modal" data-target="#chooseBonusProductModal"
+                data-pid="${product.id}"
+                ${!product.readyToOrder || !product.available ? "disabled" : ""}>
+            <i class="fa fa-shopping-bag"></i>
+            ${Resource.msg('button.addtocart', 'common', null)}
+        </button>
+        <iselse/>
+                <isif condition="${!customer.authenticated}">
+            <p>We will notify you once it back, Please enter your email</p>
+           <form  action="${URLUtils.url('Product-NotifyProductInStock','pid', pdict.product.id)}" >
+                    <div class="form-group col-12 col-sm-8 required">
+                    <input  name="email" type="text" class="form-control input-field" id="email" 
+                    placeholder="Enter email " pattern="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$" required/>
+                    
+                        <input type="hidden" value="${pdict.product.id}" name="pid" />
+                        
+                    </div>
+                    <div class="form-group col-sm-4 ">
+                        <input class="form-control btn btn-primary" type="submit" value="Notify Me" />
+                    </div></form>
+           <iselse/>
+           <p>We will notify you once it back, Please click Notify</p>
+           
+            	<a href="${URLUtils.url('Product-NotifyProductInStock', 'pid', pdict.product.id)}">
+                <button class="btn btn-primary notify-me-btn">Notify Me</button></a>
+            </isif>
+     </isif>   
+    </div>
+</div>

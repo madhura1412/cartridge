@@ -1,0 +1,45 @@
+<isif condition="${slotcontent}">
+
+    <div class="category-slot">
+        <isif condition="${slotcontent && slotcontent.calloutMsg}">
+            <h2>
+                <isprint value="${slotcontent.calloutMsg}" encoding="off"/>
+            </h2>
+        </isif>
+
+        <div class="row">
+            <isloop items="${slotcontent.content}" var="category">
+                <isif condition="${'slotBannerImage' in category.custom && category.custom.slotBannerImage}">
+                    <div class="col-sm-6 col-md-4 category-item">
+                        <a href="${URLUtils.url('Search-Show', 'cgid', category.ID)}" title="${category.displayName}">
+                            <div class="category-tile">
+                                <img class="img-fluid" src="${category.custom.slotBannerImage.getURL()}" alt="${category.displayName}"/>
+                                <h1>
+                                    <isprint value="${category.displayName}" encoding="htmlcontent"/>
+                                    <isprint value="${category.online}" encoding="htmlcontent"/>
+                                </h1>
+                            </div>
+                            
+                        </a>
+                        <isloop items="${category.products}" var="product" status="loopstatus">
+                        <var></var>
+                        <isif condition="${loopstatus.count<=6}">
+                            Product ID: ${product.ID}<br>
+                            Product Name:  ${product.name}<br>
+                                    <isif condition="${product.brand}">
+                                            Product brand:  ${product.brand}<br><br>
+                                    <iselse/>
+                                        Product Brand is Not available<br><br>
+                                    </isif>
+                           <iselseif condition="${product.count!=6}" />
+                                Product is Not available        
+                        </isif>
+                        </isloop>
+                    </div>
+
+                </isif>
+            </isloop>
+        </div>
+    </div>
+
+</isif>

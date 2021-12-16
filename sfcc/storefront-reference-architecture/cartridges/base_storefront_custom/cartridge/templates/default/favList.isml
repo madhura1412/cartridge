@@ -1,0 +1,19 @@
+<isif condition="${pdict.product!=null}">
+<h2 style="text-align:center">Wish List</h2>
+    <div class="container home-categories homepage">
+        <div class="row home-main-categories no-gutters">
+<isloop items="${pdict.product}" var="product" status="loopstatus">
+
+    <div class="col-6 col-sm-2">
+     <div class="text-center">
+     <a href="${URLUtils.url('Job-RemoveFav', 'pid', product)}">
+        <button class="btn btn-light "><span aria-hidden="true">&times;</span> Remove</button></a>
+    </div>
+            <isinclude url="${URLUtils.url('Tile-Show', 'pid', product)}"/>  
+        </div>
+
+</isloop>
+</div>
+</div>
+
+</isif>

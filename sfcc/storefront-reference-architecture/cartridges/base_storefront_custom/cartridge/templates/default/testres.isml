@@ -1,0 +1,55 @@
+<h1 style="color:red">Employee Details</h1>
+<h3>Employee Id: ${pdict.id}<br>
+Name: ${pdict.name}<br>
+Blood Group: ${pdict.bloodgroup}<br>
+Phone Number: ${pdict.phno}</h3>
+
+
+<h1 style="color:red">Array Example</h1>
+<h3>${pdict.car[0]}<br>
+${pdict.bike}</h3>
+
+ 
+<h1 style="color:red">Condition Example</h1>
+<h3>
+${pdict.madhura}
+<br>
+${pdict.condition}</h3>
+
+
+<h1 style="color:red">Loop Example</h1>
+<h3>${pdict.exampleClass}</h3> 
+
+
+<h1 style="color:red">ForLoop Example</h1>
+<h3>${pdict.loop}</h3>
+
+<h1 style="color:red">Type Example</h1>
+<h3>${pdict.type}</h3>
+
+<h1 style="color:red">Comparison Example</h1>
+<h3>${pdict.comparison}</h3>
+
+<h1 style="color:red">Switch Example</h1>
+<h3>${pdict.switchFunction}</h3>
+
+<h1 style="color:red">Set Example</h1>
+<h3>${pdict.setFunction}</h3>
+
+<h1 style="color:red">Map Example</h1>
+<h3>${pdict.mapFunction}</h3>
+
+<h1 style="color:red">Json Example</h1>
+<h3>${pdict.json}</h3>
+
+
+<h1 style="color:red">Object Example</h1>
+<h3>${pdict.testFunction}</h3>
+
+<h3>${pdict.details}</h3> 
+
+${pdict.test}
+${pdict.test1}
+
+
+<h3>${pdict.getTime}</h3> 
